@@ -44,6 +44,19 @@ jobs:
         run: git apply --verbose ./patches/lame4j-svc/CMakeLists.patch
       - name: Apply speex4j-svc CMake patches
         run: git apply --verbose ./patches/speex4j-svc/CMakeLists.patch
+      - name: Fetch PhysX JNI
+        run: |
+          set -euo pipefail
+          URL="https://github.com/fabmax/physx-jni/releases/download/v2.5.1/physx-jni-android-release.aar"
+          curl -fL --retry 3 -o physx-jni-android-release.aar "$URL"
+          unzip -q physx-jni-android-release.aar -d physx-jni
+          SO="physx-jni/jni/arm64-v8a/libPhysXJniBindings_64.so"
+          if [ ! -f "$SO" ]; then
+            echo "::warning::$SO was not found"
+          else
+            mkdir -p app/src/main/jniLibs/arm64-v8a
+            cp "$SO" app/src/main/jniLibs/arm64-v8a/
+          fi
       - name: Build
         run: gradle :app:assembleRelease -PEXTRA_CMAKE_ARGS="-DCMAKE_C_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_COMPILER_LAUNCHER=ccache"
       - name: Upload AAR
