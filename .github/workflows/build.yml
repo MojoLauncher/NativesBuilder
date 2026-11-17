@@ -46,7 +46,7 @@ jobs:
         run: git apply --verbose ./patches/speex4j-svc/CMakeLists.patch
       - name: Fetch PhysX JNI
         run: |
-          set -euo pipefail
+          set +e
           URL="https://github.com/fabmax/physx-jni/releases/download/v2.5.1/physx-jni-android-release.aar"
           curl -fL --retry 3 -o physx-jni-android-release.aar "$URL"
           unzip -q physx-jni-android-release.aar -d physx-jni
