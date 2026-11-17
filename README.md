@@ -9,6 +9,7 @@ Currently supported libraries are:
 * speex4j-svc
 * sqlite-jdbc
 * SDL2Compat
+* physx-jni (aarch64 only for now)
 
 ## TODO
 
