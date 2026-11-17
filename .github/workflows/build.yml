@@ -53,6 +53,7 @@ jobs:
           SO="physx-jni/jni/arm64-v8a/libPhysXJniBindings_64.so"
           if [ ! -f "$SO" ]; then
             echo "::warning::$SO was not found"
+            echo "### ⚠️ PhysX JNI Fetch Failed" >> $GITHUB_STEP_SUMMARY
           else
             mkdir -p app/src/main/jniLibs/arm64-v8a
             cp "$SO" app/src/main/jniLibs/arm64-v8a/
