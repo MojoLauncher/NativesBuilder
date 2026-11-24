@@ -1,7 +1,7 @@
-diff --git a/app/src/main/rnnoise4j-svc/native/CMakeLists.txt b/app/src/main/rnnoise4j-svc/native/CMakeLists.txt
+diff --git a/native/CMakeLists.txt b/native/CMakeLists.txt
 index 594cc2c..0b33abb 100644
---- a/app/src/main/rnnoise4j-svc/native/CMakeLists.txt
-+++ b/app/src/main/rnnoise4j-svc/native/CMakeLists.txt
+--- a/native/CMakeLists.txt
++++ b/native/CMakeLists.txt
 @@ -56,12 +56,34 @@ file(WRITE "${RNNOISE_DATA}/src/rnnoise_data_little_dummy.c" "${MODEL_DATA_STRIN
  
  include(FetchContent)

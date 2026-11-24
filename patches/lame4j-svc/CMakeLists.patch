@@ -1,7 +1,7 @@
-diff --git a/app/src/main/lame4j-svc/native/CMakeLists.txt b/app/src/main/lame4j-svc/native/CMakeLists.txt
+diff --git a/native/CMakeLists.txt b/native/CMakeLists.txt
 index f913456..06e7aec 100644
---- a/app/src/main/lame4j-svc/native/CMakeLists.txt
-+++ b/app/src/main/lame4j-svc/native/CMakeLists.txt
+--- a/native/CMakeLists.txt
++++ b/native/CMakeLists.txt
 @@ -32,17 +32,34 @@ endif ()
  
  include(FetchContent)
