@@ -1,7 +1,7 @@
-diff --git a/app/src/main/speex4j-svc/native/CMakeLists.txt b/app/src/main/speex4j-svc/native/CMakeLists.txt
+diff --git a/native/CMakeLists.txt b/native/CMakeLists.txt
 index f5a7f3c..512b5d9 100644
---- a/app/src/main/speex4j-svc/native/CMakeLists.txt
-+++ b/app/src/main/speex4j-svc/native/CMakeLists.txt
+--- a/native/CMakeLists.txt
++++ b/native/CMakeLists.txt
 @@ -31,12 +31,29 @@ endif ()
  
  include(FetchContent)
