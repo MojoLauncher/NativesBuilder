@@ -17,6 +17,7 @@ Currently supported libraries are:
 - [ ] Download SQLite-jdbc amalgamation in CI
 - [ ] Replace some CMakeLists patches with overrides
 - [x] Build vanilla ZSTD as well, not only the one patched for DH
+- [ ] Build diff versioned binaries, assemble meta? (depending on how mojo implements natives version mapping)
 
 ## Getting the AAR
 There are 3 ways to get the AAR file:
